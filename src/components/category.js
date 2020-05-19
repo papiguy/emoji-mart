@@ -158,6 +158,7 @@ export default class Category extends React.Component {
         i18n,
         notFound,
         notFoundEmoji,
+        onClearAllClick,
       } = this.props,
       emojis = this.getEmojis(),
       labelStyles = {},
@@ -201,6 +202,7 @@ export default class Category extends React.Component {
           >
             {label}
           </span>
+          {name === 'Recent' && <button onClick={onClearAllClick}>Clear all</button>}
         </div>
 
         <ul className="emoji-mart-category-list">
@@ -240,6 +242,7 @@ Category.propTypes /* remove-proptypes */ = {
   recent: PropTypes.arrayOf(PropTypes.string),
   notFound: PropTypes.func,
   notFoundEmoji: PropTypes.string.isRequired,
+  onClearAllClick: PropTypes.func
 }
 
 Category.defaultProps = {

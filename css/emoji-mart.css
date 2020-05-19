@@ -163,6 +163,21 @@
   background-color: rgba(255, 255, 255, .95);
 }
 
+.emoji-mart-category-label[data-name="Recent"] {
+  display: flex;
+  justify-content: space-between;
+}
+
+.emoji-mart-category-label[data-name="Recent"] span {
+  width: unset;
+}
+
+.emoji-mart-category-label[data-name="Recent"] button {
+  width: 80px;
+  background: none;
+  color: #1A97F0
+}
+
 .emoji-mart-category-list {
   margin: 0;
   padding: 0;

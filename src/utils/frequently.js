@@ -78,4 +78,8 @@ function get(perLine) {
   return sliced
 }
 
-export default { add, get }
+function removeAll() {
+  store.set('frequently', null);
+}
+
+export default { add, get, removeAll }

@@ -66,6 +66,7 @@ storiesOf('Picker', module)
       enableFrequentEmojiSort={boolean('Enable frequent sort', false)}
       useButton={false}
       custom={CUSTOM_EMOJIS}
+      onClearAllClick={action('onClearAllClick')}
     />
   ))
 

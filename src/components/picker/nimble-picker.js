@@ -194,6 +194,7 @@ export default class NimblePicker extends React.PureComponent {
     this.handleSkinChange = this.handleSkinChange.bind(this)
     this.handleKeyDown = this.handleKeyDown.bind(this)
     this.handleDarkMatchMediaChange = this.handleDarkMatchMediaChange.bind(this)
+    this.onClearAllClickHandler = this.onClearAllClickHandler.bind(this)
   }
 
   componentDidMount() {
@@ -311,6 +312,11 @@ export default class NimblePicker extends React.PureComponent {
         }
       })
     }
+  }
+
+  onClearAllClickHandler() {
+    this.props.onClearAllClick();
+    frequently.removeAll();
   }
 
   handleScroll() {
@@ -534,6 +540,7 @@ export default class NimblePicker extends React.PureComponent {
       skinEmoji,
       notFound,
       notFoundEmoji,
+      onClearAllClick,
     } = this.props
 
     var width = perLine * (emojiSize + 12) + 12 + 2 + measureScrollbar()
@@ -551,18 +558,6 @@ export default class NimblePicker extends React.PureComponent {
         aria-label={title}
         onKeyDown={this.handleKeyDown}
       >
-        <div className="emoji-mart-bar">
-          <Anchors
-            ref={this.setAnchorsRef}
-            data={this.data}
-            i18n={this.i18n}
-            color={color}
-            categories={this.categories}
-            onAnchorClick={this.handleAnchorClick}
-            icons={this.icons}
-          />
-        </div>
-
         <Search
           ref={this.setSearchRef}
           onSearch={this.handleSearch}
@@ -574,6 +569,18 @@ export default class NimblePicker extends React.PureComponent {
           custom={this.CUSTOM}
           autoFocus={autoFocus}
         />
+
+        <div className="emoji-mart-bar">
+          <Anchors
+            ref={this.setAnchorsRef}
+            data={this.data}
+            i18n={this.i18n}
+            color={color}
+            categories={this.categories}
+            onAnchorClick={this.handleAnchorClick}
+            icons={this.icons}
+          />
+        </div>
 
         <div
           ref={this.setScrollRef}
@@ -619,6 +626,7 @@ export default class NimblePicker extends React.PureComponent {
                 }}
                 notFound={notFound}
                 notFoundEmoji={notFoundEmoji}
+                onClearAllClick={this.onClearAllClickHandler}
               />
             )
           })}
