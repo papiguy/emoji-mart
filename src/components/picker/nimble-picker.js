@@ -315,6 +315,10 @@ export default class NimblePicker extends React.PureComponent {
   }
 
   onClearAllClickHandler() {
+    var component = this.categoryRefs['category-1'];
+    if (component) {
+      component.forceUpdate();
+    }
     this.props.onClearAllClick();
     frequently.removeAll();
   }
