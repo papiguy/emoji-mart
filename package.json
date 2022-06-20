@@ -21,15 +21,15 @@
   "homepage": "https://github.com/missive/emoji-mart",
   "dependencies": {
     "@babel/runtime": "^7.0.0",
-    "prop-types": "^15.6.0"
+    "prop-types": "^15.8.1"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0-0 || ^16.0.0 || ^17.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
+    "@babel/cli": "^7.17.10",
     "@babel/core": "^7.0.0",
-    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/plugin-transform-runtime": "^7.18.5",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.12.1",
     "@storybook/addon-actions": "^6.0.27",
@@ -37,23 +37,23 @@
     "@storybook/addon-links": "^6.0.27",
     "@storybook/addon-options": "^5.3.21",
     "@storybook/react": "^6.0.27",
-    "babel-jest": "^26.6.1",
-    "babel-loader": "^8.0.0",
-    "babel-plugin-transform-define": "^2.0.0",
-    "emoji-datasource": "^5.0.1",
-    "emojilib": "^2.2.1",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.11.2",
+    "babel-jest": "^28.1.1",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-transform-define": "^2.0.1",
+    "emoji-datasource": "^14.0.0",
+    "emojilib": "^3.0.6",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
     "inflection": "^1.12.0",
-    "jest": "^26.6.1",
+    "jest": "^28.1.1",
     "mkdirp": "^1.0.4",
     "prettier": "^2.1.2",
     "react": "^16",
     "react-dom": "^16",
     "react-test-renderer": "^16",
     "rimraf": "^3.0.2",
-    "size-limit": "^4.6.2",
-    "webpack": "^4.44.2"
+    "size-limit": "^7.0.8",
+    "webpack": "^5.73.0"
   },
   "scripts": {
     "clean": "rm -rf dist/ dist-es/ dist-modern/",
